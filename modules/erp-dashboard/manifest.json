@@ -1,0 +1,41 @@
+{
+    "name": "erp-dashboard",
+    "title": "Dashboard",
+    "description": "Dashboard riepilogativa generale dell'ERP",
+    "version": "1.0.0",
+    "author": "Microcodice",
+    "icon": "dashboard",
+    "route": "/dashboard",
+    "entrypoint": "DashboardApp.vue",
+    "permission_base": "erp_dashboard",
+    "dashboard_cards": [
+        {
+            "id": "ordini_recenti",
+            "label": "Ordini Recenti",
+            "icon": "shopping_cart",
+            "api": "/erp/v1/dashboard/count/orders",
+            "permission": "erp_documents_view"
+        },
+        {
+            "id": "tot_prodotti",
+            "label": "Prodotti",
+            "icon": "inventory_2",
+            "api": "/erp/v1/dashboard/count/products",
+            "permission": "erp_products_view"
+        },
+        {
+            "id": "tot_clienti",
+            "label": "Clienti",
+            "icon": "people",
+            "api": "/erp/v1/dashboard/count/clients",
+            "permission": "erp_clients_view"
+        },
+        {
+            "id": "vendite_mensili",
+            "label": "Vendite Mensili",
+            "icon": "payments",
+            "api": "/erp/v1/dashboard/value/monthly-sales",
+            "permission": "erp_accounting_view"
+        }
+    ]
+}

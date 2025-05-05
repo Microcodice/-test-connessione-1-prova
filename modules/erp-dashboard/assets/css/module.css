@@ -1,0 +1,148 @@
+ /**
+ * Stili specifici per il modulo Dashboard
+ */
+
+/* Layout griglia dashboard */
+.erp-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Animazione per il caricamento dati */
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.erp-dashboard-loading {
+    animation: pulse 1.5s infinite;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    min-height: 100px;
+}
+
+/* Card informative con colori specifici */
+.erp-dashboard-card-products {
+    border-left: 4px solid #2563eb;
+}
+
+.erp-dashboard-card-clients {
+    border-left: 4px solid #10b981;
+}
+
+.erp-dashboard-card-suppliers {
+    border-left: 4px solid #f59e0b;
+}
+
+.erp-dashboard-card-orders {
+    border-left: 4px solid #ef4444;
+}
+
+.erp-dashboard-card-inventory {
+    border-left: 4px solid #8b5cf6;
+}
+
+.erp-dashboard-card-revenue {
+    border-left: 4px solid #059669;
+}
+
+/* Sezione riepilogo attività recenti */
+.erp-dashboard-recent-activity {
+    margin-top: 16px;
+}
+
+.erp-dashboard-activity-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.erp-dashboard-activity-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.erp-dashboard-activity-content {
+    flex: 1;
+}
+
+.erp-dashboard-activity-title {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.erp-dashboard-activity-time {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* Sezione dei messaggi di benvenuto */
+.erp-dashboard-welcome {
+    margin-bottom: 32px;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.erp-dashboard-welcome-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.erp-dashboard-welcome-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    background-color: #3b82f6;
+    color: white;
+}
+
+.erp-dashboard-welcome-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.erp-dashboard-welcome-message {
+    margin-bottom: 16px;
+}
+
+.erp-dashboard-welcome-action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Media queries per il responsive */
+@media screen and (max-width: 1200px) {
+    .erp-dashboard-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .erp-dashboard-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
