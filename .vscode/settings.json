@@ -1,0 +1,11 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*",
+        "cmd": "powershell -ExecutionPolicy Bypass -File ${workspaceFolder}/git-auto-push-smart-with-log.ps1",
+        "runAtStartup": true
+      }
+    ]
+  }
+}
